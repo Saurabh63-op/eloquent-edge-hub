@@ -81,13 +81,22 @@ export function Card({ children, className }: { children: ReactNode; className?:
   );
 }
 
+export type AppPath =
+  | "/"
+  | "/about"
+  | "/courses"
+  | "/services"
+  | "/gallery"
+  | "/blog"
+  | "/contact";
+
 export function PillLink({
   to,
   children,
   variant = "primary",
   className,
 }: {
-  to: string;
+  to: AppPath;
   children: ReactNode;
   variant?: "primary" | "outline" | "light";
   className?: string;
